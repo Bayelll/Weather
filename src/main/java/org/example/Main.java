@@ -30,6 +30,7 @@ public class Main {
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
             connection.setRequestProperty(key, "Accept/json");
+            connection.setRequestMethod("GET");
 
             if(connection.getResponseCode() != 200) {
                 System.out.println("Ошибка! Попробуйте по позже");
